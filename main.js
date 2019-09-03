@@ -1,1 +1,1 @@
-console.log("Pulling my self up by my bootstraps.");
+console.log("Pulling myself up by my bootstraps.");
