@@ -55,7 +55,6 @@ const cardBuilder = (pieArray) => {
                     <div class="card-body">
                         <h5 class="card-title">${currentPie.name}</h5>
                         <p class="card-text">${currentPie.instructor}, ${currentPie.iceCream}</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
             </div>`
@@ -66,20 +65,22 @@ const cardBuilder = (pieArray) => {
 
   cardBuilder(dangPie)
 
-//const buttonClick = (e) =>{
-    //const instructor = e.target.id
-    //const selectedPies = []
-    //for (let i = 0; i < dangPie.length; i++) {
-        //const pie = dangPie[i]
-        //if (pie.instructor === instructor) {
-            //selectedPies.push(pie);
-        //}
-  //  }
-    
-//}
+const buttonClick = (e) =>{
+    const instructor = e.target.id;
+    const selectedPies = [];
+    for (let i = 0; i < dangPie.length; i++) {
+        const pie = dangPie[i];
+        if (dangPie.instructor === instructor) {
+            selectedPies.push(pie);
+        };
+    };
+    cardBuilder(selectedPies);
+};
 
- // document.getElementById('zoe').addEventListener('click', buttonClick)
-  //document.getElementById('michael').addEventListener('click', buttonClick)
-  //document.getElementById('greg').addEventListener('click', buttonClick)
-  //document.getElementById('callan').addEventListener('click', buttonClick)
-  //document.getElementById('maria').addEventListener('click', buttonClick)
+document.getElementById('zoe').addEventListener('click', buttonClickEvent)
+document.getElementById('michael').addEventListener('click', buttonClick)
+document.getElementById('greg').addEventListener('click', buttonClick)
+document.getElementById('callan').addEventListener('click', buttonClick)
+document.getElementById('maria').addEventListener('click', buttonClick)
+
+pieBuilder(dangPie);
